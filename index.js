@@ -31,3 +31,23 @@ const loopDeImpares = (numero, palabra) => {
   }
 };
 loopDeImpares(numLoop, world);
+
+
+// SUMATORIA NÚMERO
+// Deberás crear una función llamada sumatoria que reciba un número como parámetro y que devuelva la sumatoria de todos sus números anteriores, incluso ese mismo. Ejemplo:
+// sumatoria(3) debe retornar 6 porque hace (1+2+3)
+// sumatoria(8) debe retornar 36
+
+const numberSum = 3;
+
+const sumatoria = (numSum) => {
+  let suma = 0;
+  for (let i = 1; i <= numSum; i++) {
+    suma += i;
+  }
+  return suma;
+};
+sumatoria(numberSum);
+// console.log(sumatoria(numberSum));
+
+
