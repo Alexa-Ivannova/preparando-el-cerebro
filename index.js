@@ -13,3 +13,21 @@ const loopDePares = (num) => {
   }
 };
 loopDePares(numberLoop);
+
+
+// LOOP DE IMPARES CON PALABRA
+// Deberás crear una función llamada loopDeImpares que reciba como parámetros un número y una palabra, y haga un loop de 0 a 100 mostrando en la consola cada número del loop. Luego, modificar el código para que, en caso de que ese número sumado con el número pasado por parámetro sea impar, muestre en la consola la palabra pasada por parámetro.
+
+const numLoop = 1;
+const world = "Hola";
+
+const loopDeImpares = (numero, palabra) => {
+  for (let i = 0; i <= 100; i++) {
+    if ((i + numero) % 2 != 0) {
+      //   console.log(palabra);
+    } else {
+      //   console.log(i);
+    }
+  }
+};
+loopDeImpares(numLoop, world);
