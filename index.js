@@ -1,13 +1,13 @@
 // LOOP DE PARES
 // Deberás crear una función llamada loopDePares que reciba como parámetro un número y haga un loop de 0 a 100 mostrando en la consola cada número del loop. En caso de que el número de la iteración sumado con el número pasado por parámetro sea par, mostrará en la consola: “El número X es par”.
-const numberLoop = 3;
+const numberLoop = 2;
 
 const loopDePares = (num) => {
   for (let i = 0; i <= 100; i++) {
     if ((i + num) % 2 === 0) {
-      // console.log(`El número ${i} es par`);
+      //   console.log(`El número ${i} es par`);
     } else {
-      // console.log(i);
+      //   console.log(i);
     }
   }
 };
@@ -21,9 +21,9 @@ const world = "Hola";
 const loopDeImpares = (numero, palabra) => {
   for (let i = 0; i <= 100; i++) {
     if ((i + numero) % 2 != 0) {
-      //   console.log(palabra);
+      // console.log(palabra);
     } else {
-      //   console.log(i);
+      // console.log(i);
     }
   }
 };
@@ -33,11 +33,11 @@ loopDeImpares(numLoop, world);
 // Deberás crear una función llamada sumatoria que reciba un número como parámetro y que devuelva la sumatoria de todos sus números anteriores, incluso ese mismo. Ejemplo:
 // sumatoria(3) debe retornar 6 porque hace (1+2+3)
 // sumatoria(8) debe retornar 36
-const numberSum = 3;
+const numberSum = 10;
 
 const sumatoria = (numSum) => {
   let suma = 0;
-  for (let i = 1; i <= numSum; i++) {
+  for (let i = 0; i <= numSum; i++) {
     suma += i;
   }
   return suma;
@@ -49,13 +49,11 @@ sumatoria(numberSum);
 // Deberás crear una función llamada nuevoArreglo que reciba un número como parámetro y que devuelva un nuevo arreglo con tantos elementos como el número que le hayas pasado. Ejemplo:
 // nuevoArreglo(5) debe retornar [1,2,3,4,5]
 // nuevoArreglo(10) debe retornar [1,2,3,4,5,6,7,8,9,10]
-const numArray = 5;
+const numArray = 10;
 
 const nuevoArreglo = (numberArray) => {
   const array = [];
-  for (let i = 1; i <= numberArray; i++) {
-    array.push(i);
-  }
+  for (let i = 1; i <= numberArray; i++) array.push(i);
   return array;
 };
 nuevoArreglo(numArray);
@@ -84,3 +82,44 @@ functionSplit(worldSplit);
 // Soy 2 y yo soy o
 // Soy 3 y yo soy l
 // Soy 4 y yo soy a
+
+const array1 = [1, 2, 3, 4];
+const array2 = ["h", "o", "l", "a"];
+
+const arrayHandler = (arrayOne, arrayTwo) => {
+  if (arrayOne.length === arrayTwo.length) {
+    let arrayConcat = "";
+
+    for (let i = 0; i < arrayOne.length; i++) {
+      arrayConcat += `soy ${arrayOne[i]} y yo ${arrayTwo[i]}\n`;
+    }
+    return arrayConcat;
+  }
+};
+arrayHandler(array1, array2);
+// console.log(arrayHandler(array1, array2));
+
+// PALÍNDROMO
+// Deberás crear una función llamada palindromo que indique si una palabra es palíndroma o no. Debe retornar “true” en caso de que lo sea, y “false” en caso de que no. Ejemplo:
+// palindromo(“anilina”) debe retornar true
+// palindromo(“Ana”) debe retornar true
+// palindromo(“Enrique”) debe retornar false
+
+const stringPalindromo = "Ana";
+
+const palindromo = (wordAnalyzer) => {
+  wordAnalyzer = wordAnalyzer.toLowerCase();
+  const iWordAnalyzer = wordAnalyzer.length - 1;
+  let newString = "";
+
+  for (let i = iWordAnalyzer; i >= 0; i--) {
+    newString += wordAnalyzer[i];
+  }
+
+  if (wordAnalyzer === newString) {
+    return true;
+  } 
+  return false;
+};
+palindromo(stringPalindromo);
+console.log(palindromo(stringPalindromo));
